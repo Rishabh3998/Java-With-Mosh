@@ -1,0 +1,33 @@
+How Java Code Gets Executed:
+
+There are basically 2 steps involved here:
+- Compilation
+- execution
+
+            Source code (.java)    =>      Java compiler       =>          Byte Code (.class)
+
+In Compilation step Intellij uses the Java compiler to compile our code into a different format called
+Java bytecode. This compiler comes with the JDK.
+
+Now in our IDE to create this bytecode file, just open the file in terminal via right click on the file
+and click on the open->terminal. This file will be opened in terminal.
+
+Now write `javac Main.java`, now an out folder will be created with the bytecode file present inside it.
+
+Path: /Users/rishabh/Developer/2. Backend/Java/Java with Mosh/out/production/Java with Mosh/com/codewithmosh/Main.class
+
+The Java bytecode that we have in this file is platform independent, that means it can run on windows, mac, 
+linux and on any OS that has a Java runtime environment (JRE).
+
+We can download this JRE from the Oracle website for any OS, this JRE has a software component called 
+Java Virtual Machine or JVM this JVM takes our Java Bytecode and translates it to the native code for the 
+underlying OS, so if we are on windows OS this JVM will convert it to the compatible native code for windows.
+
+Due to this architecture Java applications are portable or platform independent.
+
+To run our file via terminal use cd ../ etc to get to the correct path then run the command:
+
+Syntax of cmd: java com.(packageName).(className)
+- java com.codewithmosh.Main    
+
+The above will run the file and show the output.

@@ -1,0 +1,34 @@
+Java Fundamentals
+
+1. Variables:
+- We use variables to temporary store data in computers memory.
+- int age = 30; [dataType variableName = value]
+
+2. Various types:
+- Primitive (for storing simple values)
+  - byte(1) [-128, 127], short(2) [-32K, 32K], int(4) [-2B, 2B], long(8) (For whole numbers)
+  - float(4), double(8) (For decimal numbers)
+  - char(2) [A, B, C], boolean(1) [true/false]
+
+Note: Suppose you are storing a number which is very large, and you want to format it like the one
+that we generally do while writing numbers on documents (1,25,000), In this case we use _ (underscore)
+
+int viewsCount = 123_456_789;
+
+By default Java sees each numerical value as integer so if we write
+long viewsCountLong = 3_123_456_789;
+
+Java will still see the number as int and throw error that: `Integer number too large`
+
+To fix this use L in the end of the number:
+long viewsCountLong = 3_123_456_789L; // Fix for above issue
+
+Same this goes with decimal numbers, Java sees them as doubles by default so if you use float, error will 
+be there.
+
+float price = 10.99; // error
+
+Fix:
+float price = 10.99F;
+
+- Reference (for storing complex objects)

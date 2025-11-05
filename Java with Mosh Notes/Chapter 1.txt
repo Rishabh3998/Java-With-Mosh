@@ -1,0 +1,94 @@
+Introduction to Java:
+
+Installing JAVA: 
+- To create Java Applications you need JDK (Java Development Kit)
+- It is a software development environment for building Java applications, It has a compiler, it has a bunch of code that we can reuse, it had a java runtime environment, etc.
+
+Java SE = Java Standard Addition 
+
+In this Java tutorial, we're gonna look at the anatomy of Java programs, the smallest building
+blocks in Java programs are `Functions`.
+
+A Function is a block of code that performs a task.
+
+ReturnType Name() {
+    set of steps to perform some task
+}
+
+Eg: void type function which does not return anything 
+void sendEmail() {
+
+}
+
+Entry point of the execution of a program is via main function
+void main() {
+
+}
+
+These functions don't exist on their own, they should always belong to a class, so a class is a 
+container for one or more related functions. Basically we use these classes to organize our code.
+
+Eg: 
+class Main {
+    void main() {
+        ....
+        ....
+    }
+}
+
+Functions defined between {} of a class belongs to this class, and we refer to them as methods, so
+a method is a function that is part of a class. In some languages we can create functions outside a class,
+which we refer as functions. 
+
+But as Java is a pure Object oriented language we create the functions inside a class and call them
+methods. 
+
+In Java all these classes and methods should have an access modifier, an access modifier is a special keyword
+that determines if other classes and methods in this program can access these classes and methods.
+
+We have various access modifiers like:
+1. public
+2. private 
+....
+...
+
+Most of the time we generally use public access modifier.
+
+Eg:
+public class Main {
+    public void main() {
+
+    }
+}
+
+The above example is the basic structure of a Java program, at a minimum we will have a main class and inside
+this main class we have the main method.
+
+Now why we have M in Main class and m in main method.
+
+In Java we use different conventions for naming our classes and our methods.
+
+To name our classes we use "PascalNamingConvention".
+To name our methods we use "camelNamingConvention".
+
+As we have classes which helps us to organize our code, by the same token we have a concept called `package` and we use 
+a package to group related classes, so as our applications grow we're gonna end up with hundreds or even thousands of 
+classes so we should properly organize this classes into packages.
+
+Now by convention the base package for Java Project is the domain name of your company in reverse, so the website name
+is codewithrishabh.com i.e. why we are gonna set the base package as com.codewithrishabh
+
+Note: Main method in our project should always be `static`. we will talk about static later.
+
+Eg:
+package com.codewithmosh;
+
+public class Main {
+    public static void main(String[] args) {
+        // write your code here
+        // System is a class in which some members are defined which can be
+        // used via dot operator
+        System.out.println("Hello World");
+    }
+}
+
