@@ -61,5 +61,14 @@ Eg: Date now = new Date(); [now.getTime() = getTime is the member]
 - If we change one point variable the change will affect the other variable too, which is pointing to the same 
 address.
 
-The above was applicable for older versions of Java, but in new versions, this also becomes independent and 
-the other variable will not get affected due to this.
+- Reference type nature:
+  - Point point1 = new Point(1,1);
+  - System.out.println(point1); // java.awt.Point[x=1,y=1]
+  - Point point2 = point1;
+  - System.out.println(point2); // java.awt.Point[x=1,y=1]
+
+  - point1.x = 2;
+  - System.out.println(point1); // java.awt.Point[x=2,y=1]
+  - System.out.println(point2); // java.awt.Point[x=2,y=1]
+
+GPT: https://chatgpt.com/share/690cae2f-bc98-8005-9056-4e4b8c9573d4

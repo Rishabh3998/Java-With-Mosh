@@ -57,13 +57,48 @@ public class Main {
         // Reference type nature
         Point point1 = new Point(1,1);
         System.out.println(point1); // java.awt.Point[x=1,y=1]
-        Point point2 = new Point(point1);
+        Point point2 = point1;
         System.out.println(point2); // java.awt.Point[x=1,y=1]
 
         point1.x = 2;
         System.out.println(point1); // java.awt.Point[x=2,y=1]
-        System.out.println(point2); // java.awt.Point[x=1,y=1]
+        System.out.println(point2); // java.awt.Point[x=2,y=1]
 
+        // Strings (Reference type) [Immutable]
+        System.out.println("Hello World"); // Printing a string
+        String message = new String("Hello World"); // In Java, we have a shorthand for this
+        String shortMessage = "Hello World"; // Will work same as above.
 
+        System.out.println(message);
+        System.out.println(shortMessage);
+
+        // Concatenation in strings
+        String msg = "Hello" + " World";
+        System.out.println(msg);
+
+        // Members of String class
+        boolean endsWith = msg.endsWith("ld");
+        System.out.println(endsWith); // true
+
+        boolean startsWith = msg.startsWith("He");
+        System.out.println(startsWith); // true
+
+        System.out.println(msg.length()); // 11
+
+        System.out.println(msg.indexOf("l")); // 2
+        System.out.println(msg.indexOf("sky")); // -1
+
+        // Replace method does not modify the original string, it creates a copy
+        // edit and returns that copy
+        // H and h are the args we are passing
+        System.out.println(msg.replace('H', 'h'));
+        System.out.println(msg);
+
+        System.out.println(msg.toLowerCase());
+        System.out.println(msg.toUpperCase());
+
+        String whiteSpaces = "     Hello    ";
+        System.out.println(whiteSpaces);
+        System.out.println(whiteSpaces.trim());
     }
 }
