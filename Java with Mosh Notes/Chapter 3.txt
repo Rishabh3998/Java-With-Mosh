@@ -5,7 +5,7 @@ Java Fundamentals
 - int age = 30; [dataType variableName = value]
 
 2. Various types:
-- Primitive (for storing simple values)
+- Primitive (for storing simple values [number, characters, booleans])
   - byte(1) [-128, 127], short(2) [-32K, 32K], int(4) [-2B, 2B], long(8) (For whole numbers)
   - float(4), double(8) (For decimal numbers)
   - char(2) [A, B, C], boolean(1) [true/false]
@@ -31,4 +31,35 @@ float price = 10.99; // error
 Fix:
 float price = 10.99F;
 
-- Reference (for storing complex objects)
+Note: We can have same class in different packages, it will not create any conflict
+Eg: Date exists in [java.util, java.sql], packages create namespace for our classes.
+
+Note: When we are declaring primitive types we don't need to allocate memory, but while declaring the 
+reference types we have to use `new` keyword to allocate memory for the data type which we are going to declare.
+Primitive types don't have any members, but Reference types has members.
+
+Eg: byte age = 30; [age.[] = no member we cannot access anything via dot]
+Eg: Date now = new Date(); [now.getTime() = getTime is the member]
+
+- Reference (for storing complex objects [data, mail message])
+  - while declaring the reference types we have to use `new` keyword to allocate memory for the data type which 
+  we are going to declare.
+  - Date now = new Date(); [now.getTime() = getTime is the member]
+  - In primitive types, values allocated in separate memory and are independent to each other, in reference type
+  the behavior is little different.
+  - Allocation of point1(1,1) [address: 100]
+  - point1[100], here variable store the address of the point object present in memory, not the actual point object.
+  - point2[100], same address will be stored here of the Point object.
+
+
+  point1[value: 100] -
+                        - 
+                           -> Point(1,1) [address: 100]
+                        -
+  point2[value: 100] -
+
+- If we change one point variable the change will affect the other variable too, which is pointing to the same 
+address.
+
+The above was applicable for older versions of Java, but in new versions, this also becomes independent and 
+the other variable will not get affected due to this.
