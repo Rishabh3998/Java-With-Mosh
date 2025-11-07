@@ -143,5 +143,92 @@ public class Main {
         int [][][] threeD = new int[2][2][5];
         threeD[0][0][0] = 1;
         System.out.println(Arrays.deepToString(threeD)); // [[[1, 0, 0, 0, 0], [0, 0, 0, 0, 0]], [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]]
+
+        // Constants
+        final float pi = 3.14F;
+
+        // Arithmetic operations
+        int result = 10 + 2; // 2
+        System.out.println(result);
+
+        int div = 10 / 3;
+        System.out.println(div); // 3
+        // Note: The answer is 3 because division of 2 whole numbers is a whole number.
+
+        // To fix the above typecast the variables result
+        double division = (double)10 / (double)3; // 3.333333....
+        System.out.println(division);
+
+        // Increment and Decrement operator
+        int incPre = 1;
+        int incPost = 1;
+
+        ++incPre;
+        incPost++;
+        System.out.println(incPre); // 2
+        System.out.println(incPost); // 2
+
+        int decPre = 2;
+        int decPost = 2;
+
+        --decPre;
+        decPost--;
+        System.out.println(decPre); // 1
+        System.out.println(decPost); // 1
+
+        int v1 = 1;
+        // First v1 will get copied to v2, then v1 will increase
+        int v2 = v1++;
+
+        int x1 = 1;
+        // First x1 will increase then will get copied to x2
+        int x2 = ++x1;
+
+        System.out.println(x1); // 2
+        System.out.println(v2); // 1
+
+        int xby2 = 1;
+        xby2 = xby2 + 2;
+        xby2 += 2;
+        xby2 -= 2;
+        xby2 /= 2;
+        xby2 *= 2;
+
+        short sht  = 1;
+        int integer = sht + 2;
+
+        // Above we are adding short type in integer type
+        // What should be the result
+
+        // Short has 2 byte, int has 4 byte i.e. short can be stored in an integer, therefore
+        // when Java sees the value of short it will automatically typecast it and store in int.
+        // This is called as implicit casting
+        // byte < short < int < long < float < double
+        System.out.println(integer); // 3
+
+        double decimalValue = 1.1;
+        double doubleValueAdd = decimalValue + 2;
+        // double + integer (int is less precise than double, automatically cast to double i.e. 2.0 )
+        System.out.println(doubleValueAdd); // 3.1
+
+        // Explicit typecasting
+        double toBeCast = 1.1;
+        int expCast = (int)toBeCast + 2;
+        System.out.println(expCast); // 3
+
+        String str = "1";
+        int res1 = Integer.parseInt(str) + 2;
+        System.out.println(str); // 1
+        short res2 = (short) (Short.parseShort(str) + 1);
+        System.out.println(str); // 1
+        float res3 = Float.parseFloat(str) + 1;
+        System.out.println(str); // 1
+        double res4 = Double.parseDouble(str) + 4;
+
+        System.out.println(str); // 1
+        System.out.println(res1); // 3
+        System.out.println(res2); // 2
+        System.out.println(res3); // 2.0
+        System.out.println(res4); // 5.0
     }
 }

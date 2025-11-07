@@ -1,0 +1,36 @@
+Constants
+
+To make any variable constant through the program, we use final keyword.
+This keyword tells Java that this variable will be only initialized once and cannot be re-assigned, to a new value.
+If programmer will try to re-assign this, the IDE will throw compilation error.
+
+Arithmetic Expressions
+
+In Java we have same arithmetic expressions that we have in Mathematics.
+
+Addition, Subtraction, Multiplication, Division, Modulus (Remainder of a division)
+
+**Order of Operations in Arithmetic Operations**
+
+int x = 10 + 3 * 2;
+
+This will use BODMAS kind of rule, here the priority of * and / is more than + and -
+-> 10 + 3 * 2;
+-> 10 + 6
+-> 16
+
+Order => Brackets () >> * and / >> + and -
+
+**Casting and Type conversion**
+
+Casting are of 2 types:
+1. Implicit (Automatic)
+2. Explicit (Done by user)
+
+Casting can only happen between compatible types, so all these types are compatible because these all are numbers.
+We cannot cast a string to become a number. Not compatible.
+
+How to do this casting if types are incompatible.
+
+String x = "1";
+Integer.parseInt(x); // Takes string and returns integer
