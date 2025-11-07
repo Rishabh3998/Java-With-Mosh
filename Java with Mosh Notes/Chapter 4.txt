@@ -8,3 +8,10 @@ In Java Strings are immutable, we cannot mutate a string.
 So, any method that modify the strings always returns a new string object.
 
 Refer the code to see the methods present in String object.
+
+Escape sequences
+
+- \"
+- \\
+- \n
+- \t

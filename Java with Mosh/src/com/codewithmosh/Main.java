@@ -1,6 +1,7 @@
 package com.codewithmosh;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -100,5 +101,47 @@ public class Main {
         String whiteSpaces = "     Hello    ";
         System.out.println(whiteSpaces);
         System.out.println(whiteSpaces.trim());
+
+        // Escape Sequences
+        String escape = "Hello \"Mosh\"";
+        System.out.println(escape);
+
+        String path = "c:\\Windows\\..";
+        System.out.println(path);
+
+        // new line and tab
+        String newLine = "Hello \nWorld";
+        String tab = "Hello \tWorld";
+        System.out.println(newLine);
+        System.out.println(tab);
+
+        // Arrays
+        int[] numbers = new int[5];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
+        System.out.println(numbers); // Address of the array
+        System.out.println(Arrays.toString(numbers)); // Array [1,2,3,0,0]
+
+        int[] newNumbers = {2,3,5,1,4};
+        System.out.println(Arrays.toString(newNumbers));
+        System.out.println(newNumbers.length);
+        Arrays.sort(newNumbers);
+        System.out.println(Arrays.toString(newNumbers));
+
+        // Multi-dimensional Arrays
+
+        // 2-D Arrays (new int[rows][columns])
+        int [][] mat = new int[2][3];
+        int [][] twoD = {{1,2,3}, {4,5,6}};
+        mat[0][0] = 1;
+        // To print multi-dimensional arrays, use deepToString
+        System.out.println(Arrays.deepToString(mat)); // [[1, 0, 0], [0, 0, 0]]
+        System.out.println(Arrays.deepToString(twoD)); // [[1, 2, 3], [4, 5, 6]]
+
+        // 3-D Arrays
+        int [][][] threeD = new int[2][2][5];
+        threeD[0][0][0] = 1;
+        System.out.println(Arrays.deepToString(threeD)); // [[[1, 0, 0, 0, 0], [0, 0, 0, 0, 0]], [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0]]]
     }
 }

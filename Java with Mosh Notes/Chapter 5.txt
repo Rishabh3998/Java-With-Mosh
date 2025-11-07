@@ -1,0 +1,13 @@
+Arrays
+
+We use Arrays to store a list of items, [numbers, characters, string, etc];
+To print an array, we use Arrays library. Arrays.toString(numbers);
+Note: Multiple implementations of a method is known as method overloading.
+Arrays have a predefined fix size, and we can only add the limited amount of elements
+according to the defined size, to make this array dynamic i.e. add n number of elements
+dynamically we have to use Java Collections library, in which we have one data structure
+specifically for this.
+
+Multi-dimensional Arrays
+
+Go through the code, to understand how 2-D, 3-D, etc etc works.
