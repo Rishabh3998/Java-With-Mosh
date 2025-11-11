@@ -19,3 +19,19 @@ Eg: NumberFormat.getCurrencyInstance()
 When we call these methods, it will create an instance of this NumberFormat class and return it.
 So, to create an instance we use these methods instead of using new operator. This is what we call a factory method.
 Because it is kind of a factory, which creates new object, the return type would be a NumberFormat object.
+
+Reading inputs
+
+To read the inputs from the user, we can use scanner class.
+Syntax: Within the parenthesis define the one from which you are going to read the input, Eg: Terminal, File etc
+Scanner sc = new Scanner();
+For Terminal we use System.in
+Scanner sc = new Scanner(System.in);
+
+We can read inputs of multiple type like String, byte, BigDecimal etc. We can access these via .next, .nextByte etc.
+
+Scanner.next();
+Scanner.nextByte();
+Scanner.nextBigDecimal();
+Scanner.nextBoolean();
+Scanner.nextFloat();

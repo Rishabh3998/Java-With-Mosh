@@ -4,6 +4,7 @@ import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -278,5 +279,25 @@ public class Main {
         NumberFormat getPercent = NumberFormat.getPercentInstance();
         String getPerString = getPercent.format(0.1);
         System.out.println(getPerString);
+
+        // Reading inputs
+
+        // Will stop at a whitespace
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your first name: ");
+        String inputName = scanner.next();
+        System.out.println("You are " + inputName);
+
+        // Will parse whole line with whitespaces
+        Scanner scannerFullName = new Scanner(System.in);
+        System.out.print("Enter your full name: ");
+        String inputFullName = scannerFullName.nextLine().trim();
+        System.out.println("You are " + inputFullName);
+
+        // Will parse byte datatype
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter your age: ");
+        byte inputAge = sc.nextByte();
+        System.out.println("You are " + inputAge);
     }
 }
