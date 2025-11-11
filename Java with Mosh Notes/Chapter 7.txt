@@ -35,3 +35,11 @@ Scanner.nextByte();
 Scanner.nextBigDecimal();
 Scanner.nextBoolean();
 Scanner.nextFloat();
+
+Till now we learn about:
+
+1. Variables and Constants
+2. Primitive and Reference types
+3. Casting
+4. Numbers, Strings, and Arrays
+5. Read input
