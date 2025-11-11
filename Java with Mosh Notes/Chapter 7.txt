@@ -1,0 +1,21 @@
+Mathematics
+
+Let's take a look at the Math class to perform mathematical Operations.
+
+Go through the code to get a better understanding
+
+NumberFormat class for formatting the numbers
+
+We have this class which can help us to format the numbers we have, this works as a utility for us.
+We cannot instantiate this in Java, because this class is abstract. In Java we have this concept of abstract classes, 
+like some classes are abstract, basically like a half baked cake, we cannot use the new operator to create an
+instance of them.
+
+We cannot create an instance of a class if the class is abstract in nature. Eg: NumberFormat class.
+
+This class has a bunch of methods, we can access them using dot operator.
+Eg: NumberFormat.getCurrencyInstance()
+
+When we call these methods, it will create an instance of this NumberFormat class and return it.
+So, to create an instance we use these methods instead of using new operator. This is what we call a factory method.
+Because it is kind of a factory, which creates new object, the return type would be a NumberFormat object.

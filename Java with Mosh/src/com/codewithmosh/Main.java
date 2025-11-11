@@ -1,6 +1,7 @@
 package com.codewithmosh;
 
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -230,5 +231,52 @@ public class Main {
         System.out.println(res2); // 2
         System.out.println(res3); // 2.0
         System.out.println(res4); // 5.0
+
+        // Mathematics
+
+        // RoundOff: Round off the float or double value to integer value
+        int roundOff = Math.round(1.1F);
+        System.out.println(roundOff);
+
+        // Ceil Value: Smallest integer that is greater than or equal to the number passed in args
+        double ceilValue = Math.ceil(1.1F);
+        System.out.println(ceilValue);
+
+        // Floor Value: Largest integer that is smaller than or equal to the number passed in args
+        int floorValue = (int)Math.floor(1.1F);
+        System.out.println(floorValue);
+
+        // Max: Return greater number between 2 values
+        int max = Math.max(2,5);
+        int min = Math.min(2,5);
+        System.out.println(max);
+        System.out.println(min);
+
+        // Note: all the methods present inside the Math class are overloaded to cater different
+        // datatypes.
+
+        // Random number generation
+        double random = Math.random();
+        double randomBetween0to100 = Math.random() * 100;
+        int roundedOffRandom = (int)Math.round(randomBetween0to100);
+        System.out.println(random); // Number will range between [0,1] a floating point number will generate
+        System.out.println(randomBetween0to100);
+        System.out.println(roundedOffRandom);
+
+        // Formatting numbers
+
+        // $1,234,567
+        // 10%
+
+        // How to format the number to show like above
+
+        // We have a class NumberFormat in Java which can help us for this utility
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String currencyString = currency.format(1234567.891);
+        System.out.println(currencyString);
+
+        NumberFormat getPercent = NumberFormat.getPercentInstance();
+        String getPerString = getPercent.format(0.1);
+        System.out.println(getPerString);
     }
 }
