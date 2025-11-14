@@ -1,4 +1,4 @@
-Control Flows
+## Control Flows
 
 1. Comparison Operators ( ==, >=, <=, >, <, != )
 2. Logical Operators (&&, ||, !)
@@ -6,5 +6,46 @@ Control Flows
 4. Loops
 5. Error Handling
 
-For Loops
+## For Loops
 
+For loop (classic) syntax:
+for (initialization; condition; update) {
+    // body
+}
+
+Example:
+for (int i = 0; i < n; i++) {
+    // use i
+}
+
+Notes:
+- initialization: runs once before the loop starts (can declare variables here).
+- condition: evaluated before each iteration; loop stops when false.
+- update: executed after each iteration (commonly increments/decrements).
+- All three parts are optional but the semicolons are required:
+  for (;; ) { ... } // infinite loop
+- Multiple variables: for (int i = 0, j = n; i < j; i++, j--) { ... }
+- Scope: variables declared in the header are scoped to the loop.
+- Use break to exit early, continue to skip to the next iteration.
+- Use classic for when you need an index, custom step size, or to iterate a range.
+
+Enhanced for (for-each) syntax:
+for (ElementType elem : collectionOrArray) {
+    // use elem
+}
+
+Examples:
+for (String s : list) {
+    System.out.println(s);
+}
+for (int x : array) {
+    // use x
+}
+
+Notes:
+- Works with arrays and any Iterable (e.g., List, Set).
+- Simpler and less error-prone for straightforward iteration.
+- No index access directly; if you need the index, use the classic for.
+- Modifying the collection structurally during iteration may throw ConcurrentModificationException.
+- The loop variable holds a copy for primitives or a reference for objects; modifying the reference won't replace elements in the array/collection.
+- Use for-each for readability when you only need each element.
